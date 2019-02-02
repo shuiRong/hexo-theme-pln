@@ -28,9 +28,7 @@
       <%- partial('post/meta', {item: item}) %>
     </div>
     <hr>
-    <% if (theme.show_toc_bool) {  %>
-      <%- toc(page.content, {list_number: false}) %>
-    <% } %>
+    <%- toc(page.content, {list_number: false}) %>
     <div class="picture-container">
       <% if (item.photos && item.photos.length){ %>
         <%- partial('post/gallery', {item: item}) %>
@@ -40,7 +38,7 @@
 
   </article>
   </script>
-    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+    <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
   </script>
   <div class="busuanzi center">
     <%= __("page_read") %>:&nbsp;<span id="busuanzi_value_page_pv"></span>&nbsp;・&nbsp;
