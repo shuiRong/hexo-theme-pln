@@ -1,51 +1,41 @@
-<script src="/js/jquery.min.js"></script>
-<script src="/js/search.min.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/search.min.js"></script>
 <script type="text/javascript">
 
   // disqus scripts
   <% if (config.disqus_shortname) { %>
   var disqus_shortname = '<%= config.disqus_shortname %>';
-      (function () {
-        var dsq = document.createElement('script');
-        dsq.type = 'text/javascript';
-        dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/<% if (page.comments){ %>embed.js<% } else { %>count.js<% } %>';
-        (document.getElementsByTagName('body')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-      }());
+    (function () {
+      var dsq = document.createElement('script');
+      dsq.type = 'text/javascript';
+      dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/<% if (page.comments){ %>embed.js<% } else { %>count.js<% } %>';
+      (document.getElementsByTagName('body')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
   <% } %>
 
-      // dropdown scripts
-      $(".dropdown").click(function (event) {
-        var current = $(this);
-        event.stopPropagation();
-        $(current).children(".dropdown-content")[($(current).children(".dropdown-content").hasClass("open")) ? 'removeClass' : 'addClass']("open")
-      });
-    $(document).click(function () {
-      $(".dropdown-content").removeClass("open");
-    })
+    // dropdown scripts
+    $(".dropdown").click(function (event) {
+      var current = $(this);
+      event.stopPropagation();
+      $(current).children(".dropdown-content")[($(current).children(".dropdown-content").hasClass("open")) ? 'removeClass' : 'addClass']("open")
+    });
+  $(document).click(function () {
+    $(".dropdown-content").removeClass("open");
+  })
 
-    var path = "/search.xml";
-    searchFunc(path, 'local-search-input', 'local-search-result');
+  var path = "/search.xml";
+  searchFunc(path, 'local-search-input', 'local-search-result');
 </script>
 
 <div id="updown">
   <div class="sidebar_wo" id="leimu">
-    <img
-      src="/img/leimu.png"
-      alt="雷姆"
-      onmouseover="this.src='/img/leimu.png'"
-      onmouseout="this.src='/img/leimu.png'"
-      id="audioBtn"
-    />
+    <img src="img/leimu.png" alt="雷姆" onmouseover="this.src='/img/leimu.png'" onmouseout="this.src='/img/leimu.png'"
+      id="audioBtn" />
   </div>
   <div class="sidebar_wo" id="lamu">
-    <img
-      src="/img/lamu_2.png"
-      alt="拉姆"
-      onmouseover="this.src='/img/lamu_1.png'"
-      onmouseout="this.src='/img/lamu_2.png'"
-      id="audioBtn"
-    />
+    <img src="img/lamu_2.png" alt="拉姆" onmouseover="this.src='/img/lamu_1.png'" onmouseout="this.src='/img/lamu_2.png'"
+      id="audioBtn" />
   </div>
 </div>
 
@@ -88,8 +78,8 @@
   }
 </style>
 
-<script src="/js/click.js"></script>
-<script src="/js/anti-baidu.js"></script>
+<script src="js/click.js"></script>
+<script src="js/anti-baidu.js"></script>
 <style>
   .cc {
     display: flex;
@@ -99,14 +89,7 @@
   }
 </style>
 <div class="cc">
-  <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"
-    ><img
-      alt="知识共享许可协议"
-      style="border-width:0"
-      src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png"/></a
-  ><br />本作品采用<a
-    rel="license"
-    href="http://creativecommons.org/licenses/by-nc-sa/4.0/"
-    >知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a
-  >进行许可
+  <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0"
+      src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a><br />本作品采用<a rel="license"
+    href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>进行许可
 </div>
