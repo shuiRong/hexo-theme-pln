@@ -32,6 +32,14 @@ feed:
 
 show_toc_bool: true
 
+# 版权基础设定：0-关闭声明； 1-文章对应的md文件里有declare: true属性，才有版权声明； 2-所有文章均有版权声明
+# 当前应用的版权协议地址。
+# 版权协议的名称
+# 版权协议的Logo
+declare_type: 2
+licensee_url: https://creativecommons.org/licenses/by-nc-sa/4.0/
+licensee_name: '知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议'
+
 # If you want to use valine,you should get the appId and appKey form https://leancloud.cn ,more setting please see https://valine.js.org
 valine:
   enable: false # !!if you want use valine comment system,please set enable: true
